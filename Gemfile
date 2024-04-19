@@ -10,6 +10,8 @@ gem "sprockets-rails"
 
 gem 'bootstrap-sass'
 
+gem 'bcrypt'
+
 
 gem "puma", ">= 5.0"
 
