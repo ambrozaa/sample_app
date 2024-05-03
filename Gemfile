@@ -27,6 +27,12 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 gem "bootsnap", require: false
 
+gem 'faker'
+
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+
+
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem "sqlite3", "~> 1.4"
