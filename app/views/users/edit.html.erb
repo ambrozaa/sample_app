@@ -8,7 +8,7 @@
   <div class="col-md-6 buffer-top">
 
     <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
+      <%= render 'shared/error_messages', object: f.object %>
 
       <div class="form-group">
         <%= f.label :name %>

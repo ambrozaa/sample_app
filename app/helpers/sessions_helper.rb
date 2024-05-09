@@ -9,7 +9,6 @@ module SessionsHelper
   def signed_in?
     !current_user.nil?
   end
-
   def current_user=(user)
     @current_user = user
   end
@@ -21,6 +20,15 @@ module SessionsHelper
   def current_user?(user)
     user == current_user
   end
+
+  def signed_in_user
+    unless signed_in?
+      store_location
+      flash[:warning] = "Please sign in."
+      redirect_to signin_url
+    end
+  end
+
   def sign_out
     current_user.update_attribute(:remember_token,
                                   User.encrypt(User.new_remember_token))
