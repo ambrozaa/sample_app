@@ -32,6 +32,9 @@ gem 'faker'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 
+gem 'gravatar'
+gem 'byebug'
+
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
